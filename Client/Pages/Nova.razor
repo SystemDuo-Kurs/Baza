@@ -1,0 +1,30 @@
+﻿@page "/nova"
+
+<ul>
+    <li><b>Jedan</b></li>
+    <li>Jedan</li>
+    <li>Jedan</li>
+</ul>
+
+<ol>
+    @foreach(string nesto in Lista)
+    {
+        <li>@nesto</li>
+    }
+</ol>
+
+
+
+@code 
+{
+    public List<string> Lista = new();
+    public string Neki = "Teeest";
+    protected override async Task OnInitializedAsync()
+    {
+        Lista.Add("Nesto");
+        //Lista.Add("Drugo");
+        //Lista.Add("Trece");
+        //Lista.Add("Cetvrta");
+        //Lista.Add("Peta");
+    }
+}
